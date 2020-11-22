@@ -22,7 +22,7 @@ def leven(word1, word2):
         for y in range(1, size_y):
             a = table[x-1, y] + 1
             b = table[x-1, y-1] + 2
-            if seq1[x-1] == seq2[y-1]:
+            if word1[x-1] == word2[y-1]:
                 b = table[x-1, y-1] 
             c = table[x, y-1] + 1
             minVal = min(a, b, c)
@@ -46,7 +46,6 @@ def main():
     lastname = input()
     leven(firstname, lastname)
 
-
-
+ 
 if __name__ == "__main__":
     main()
